@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   userName = '';
 
-  resetUserName() {
-    this.userName = '';
+  // constructor(){
+  //   this.userName = '';
+  // }
+
+  getColor() {
+    return this.userName !== '' ? 'blue' : 'green';
   }
   
 }

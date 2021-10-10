@@ -38,5 +38,9 @@
 <main class="flex flex-col justify-center items-center">
   <h3 class="p-2"> {{ userName }}  </h3>
   <input class="my-5 border border-solid border-black bg-gray-400" [(ngModel)]="userName"> 
-  <button [className]="userName==='' ? 'bg-blue-200' : 'bg-green-200' " [disabled]="userName===''" (click)="userName=''" > Reset </button>
+  <button [ngStyle]="{backgroundColor: getColor()}" [disabled]="userName===''" (click)="userName=''" > Reset </button>
+  <p *ngIf="userName !==''; else noUserName"> Username Set! </p>
+  <ng-template #noUserName>
+    <p> Please set username </p>
+  </ng-template>
 </main>
