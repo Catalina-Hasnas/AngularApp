@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
+  servers: string[] = [];
+
   constructor() { }
+
+  addUser() {
+    this.servers.push('newUser');
+  }
 
   ngOnInit() {
   }
